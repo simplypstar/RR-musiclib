@@ -7,7 +7,7 @@ function Gallery(props) {
             <GalleryItem item={item} key={i}/>
         )
     })
-
+//gallery
     return (
     <div>
         {display}
