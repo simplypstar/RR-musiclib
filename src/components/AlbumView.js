@@ -6,7 +6,7 @@ function AlbumView() {
     const [ albumData, setAlbumData ] = useState([])
 
     useEffect(() => {
-        const API_URL = `http://localhost:4000/song/${id}`
+        const API_URL = `http://localhost:3000/song/${id}`
         const fetchData = async () => {
             const response = await fetch(API_URL)
             const resData = await response.json()
@@ -15,8 +15,7 @@ function AlbumView() {
         fetchData()
     }, [id])
 
-    const justSongs = albumData.filter(entry => 
-        entry.wrapperType === 'track')
+    const justSongs = albumData.filter(entry => entry.wrapperType === 'track')
 
     const renderSongs = justSongs.map((song, i) => {
         return (
