@@ -11,7 +11,6 @@ function ArtistView() {
         const fetchData = async () => {
             const response = await fetch(API_URL)
             const resData = await response.json()
-            //console.log(resData)
             setArtistData(resData.results)
         }
         fetchData()
